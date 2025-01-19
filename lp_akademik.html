@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Akademik</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="lp_akademik.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <!-- Sidebar -->
+        <div class="sidebar-header">
+            <h2>AkademiManajer</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><i data-feather="activity"></i><a href="admin.html">Dashboard</a></li>
+            <li><i data-feather="database"></i><a href="kd_pengguna.html">Kelola Data Pengguna</a></li>
+            <li><i data-feather="calendar"></i><a href="kd_jadwal.html">Kelola Jadwal</a></li>
+            <li><i data-feather="file-text"></i><a href="lp_akademik.html">Laporan Akademik</a></li>
+            <li><i data-feather="settings"></i><a href="pengaturan.html">Pengaturan Sistem</a></li>
+            <li><i data-feather="log-out"></i><a href="login.html">Keluar</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Laporan Akademik</h1>
+            <p>Lihat dan kelola laporan nilai mahasiswa.</p>
+        </header>
+
+        <!-- Form Input Data -->
+        <div class="form-section">
+            <form id="add-report-form">
+                <input type="text" id="student-nim" placeholder="NIM " required>
+                <input type="text" id="student-name" placeholder="Nama Mahasiswa" required>
+                <input type="text" id="student-Prodi" placeholder="Prodi" required>
+                <input type="text" id="semester" placeholder="Semester" required>
+                <input type="text" id="subject" placeholder="Mata Kuliah" required>
+                <input type="text" id="grade" placeholder="Nilai" required>
+                <input type="text" id="sks" placeholder="Sks" required>
+                <input type="text" id="dosen" placeholder="Dosen" required>
+                <input type="text" id="kehadiran" placeholder="Kehadiran" required>
+                <input type="text" id="absen" placeholder="Absen" required>
+                <input type="text" id="status" placeholder="Status" required>
+                <button type="submit">Tambah Data</button>
+            </form>
+        </div>
+
+        <!-- Tabel Laporan Akademik -->
+        <div class="academic-report">
+            <table>
+                <thead>
+                    <tr>
+                        <th>NIM</th>
+                        <th>Nama Mahasiswa</th>
+                        <th>Prodi</th>
+                        <th>Semester</th>
+                        <th>Mata Kuliah</th>
+                        <th>Nilai</th>
+                        <th>SKS</th>
+                        <th>Dosen</th>
+                        <th>kehadiran</th>
+                        <th>Absen</th>
+                        <th>Status</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1234567</td>
+                        <td>Ikhwan Syaipulla</td>
+                        <td>Sistem Informasi</td>
+                        <td>Semester 1</td>
+                        <td>Analisis & Perancangan Sistem</td>
+                        <td>A</td>
+                        <td>3</td>
+                        <td>Erwin Gatot Amiruddin, S.Kom., M.Kom.</td>
+                        <td>16/16</td>
+                        <td>0</td>
+                        <td>Lulus</td>
+                        <td><button class="delete-btn">Hapus</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="lp_akademik.js"></script>
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

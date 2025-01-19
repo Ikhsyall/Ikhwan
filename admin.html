@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <!-- Feather Icon -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <div class="sidebar">
+    <div class="sidebar-header">
+      <h2>AkademiManajer</h2>
+    </div>
+    <ul class="sidebar-menu">
+      <li><i data-feather="activity"></i><a href="admin.html">Dashboard</a></li>
+      <li><i data-feather="database"></i><a href="kd_pengguna.html">Kelola Data Pengguna</a></li>
+      <li><i data-feather="calendar"></i><a href="kd_jadwal.html">Kelola Jadwal</a></li>
+      <li><i data-feather="file-text"></i><a href="lp_akademik.html">Laporan Akademik</a></li>
+      <li><i data-feather="settings"></i><a href="pengaturan.html">Pengaturan Sistem</a></li>
+      <li><i data-feather="log-out"></i><a href="login.html">Keluar</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+
+    <header>
+      <h1>Selamat datang, Admin</h1>
+      <p>Kelola sistem akademik .</p>
+    </header>
+
+    <div class="dashboard-cards">
+      <div class="card">
+        <h3 >Data Pengguna</h3>
+        <p>Kelola akun mahasiswa, dosen, dan admin.</p>
+        <button id="kelolaDataPengguna">Kelola</button>
+      </div>
+      <div class="card">
+        <h3>Jadwal Kuliah</h3>
+        <p>Atur jadwal kuliah untuk semua program studi.</p>
+        <button id="kelolaJadwal">Kelola Jadwal</button>
+      </div>
+      <div class="card">
+        <h3>Laporan Akademik</h3>
+        <p>Lihat dan kelola laporan nilai mahasiswa.</p>
+        <button id="lihatLaporan">Lihat Laporan</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feather Icon Script -->
+  <script>
+    feather.replace();
+  </script>
+  <script src="admin.js"></script>
+</body>
+</html>

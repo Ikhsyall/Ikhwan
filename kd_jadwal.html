@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Jadwal</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="kd_jadwal.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>AkademiManajer</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><i data-feather="activity"></i><a href="admin.html">Dashboard</a></li>
+            <li><i data-feather="database"></i><a href="kd_pengguna.html">Kelola Data Pengguna</a></li>
+            <li><i data-feather="calendar"></i><a href="kd_jadwal.html">Kelola Jadwal</a></li>
+            <li><i data-feather="file-text"></i><a href="lp_akademik.html">Laporan Akademik</a></li>
+            <li><i data-feather="settings"></i><a href="pengaturan.html">Pengaturan Sistem</a></li>
+            <li><i data-feather="log-out"></i><a href="login.html">Keluar</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Kelola Jadwal</h1>
+            <p>Atur jadwal kuliah untuk semua program studi.</p>
+        </header>
+
+        <div class="schedule-management">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Mata Kuliah</th>
+                        <th>Kelas</th>
+                        <th>Dosen</th>
+                        <th>Ruang</th>
+                        <th>Hari</th>
+                        <th>Waktu</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Pemrograman 2</td>
+                        <td>A</td>
+                        <td>Prof. Jane</td>
+                        <td>101</td>
+                        <td>Senin</td>
+                        <td>08:00 - 10:00</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Analisis & Perancangan Sistem</td>
+                        <td>B</td>
+                        <td>Erwin Gatot Amiruddin, S.Kom., M.Kom</td>
+                        <td>101</td>
+                        <td>Selasa</td>
+                        <td>10:00 - 12:00</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Hapus</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Basis Data</td>
+                        <td>C</td>
+                        <td>Dr. Muhammad Arafah, S.Kom., M.T.</td>
+                        <td>101</td>
+                        <td>Rabu</td>
+                        <td>08:00 - 10:00</td>
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>Tambah Jadwal Kuliah</h2>
+            <form>
+                <label for="course">Mata Kuliah:</label>
+                <input type="text" id="course" name="course" required>
+
+                <label for="course">Kelas:</label>
+                <input type="text" id="course" name="course" required>
+
+                <label for="course">Dosen:</label>
+                <input type="text" id="course" name="course" required>
+
+                <label for="course">Ruang:</label>
+                <input type="text" id="course" name="course" required>
+
+
+                <label for="day">Hari:</label>
+                <select id="day" name="day" required>
+                    <option value="senin">Senin</option>
+                    <option value="selasa">Selasa</option>
+                    <option value="rabu">Rabu</option>
+                    <option value="kamis">Kamis</option>
+                    <option value="jumat">Jumat</option>
+                </select>
+
+                <label for="time">Waktu:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Simpan Jadwal</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

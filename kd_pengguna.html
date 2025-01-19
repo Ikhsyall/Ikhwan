@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelola Data Pengguna</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="kd_pengguna.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2>AkademiManajer</h2>
+        </div>
+        <ul class="sidebar-menu">
+            <li><i data-feather="activity"></i><a href="admin.html">Dashboard</a></li>
+            <li><i data-feather="database"></i><a href="kd_pengguna.html">Kelola Data Pengguna</a></li>
+            <li><i data-feather="calendar"></i><a href="kd_jadwal.html">Kelola Jadwal</a></li>
+            <li><i data-feather="file-text"></i><a href="lp_akademik.html">Laporan Akademik</a></li>
+            <li><i data-feather="settings"></i><a href="pengaturan.html">Pengaturan Sistem</a></li>
+            <li><i data-feather="log-out"></i><a href="login.html">Keluar</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Kelola Data Pengguna</h1>
+            <p>Kelola akun mahasiswa, dosen, dan admin.</p>
+            <button id="addUserButton">Tambah Pengguna</button>
+        </header>
+
+        <div class="user-management">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Jabatan</th>
+                        <th>Email</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="userTable">
+                    <tr>
+                        <td>Ikhwan Syaipulla</td>
+                        <td>Mahasiswa</td>
+                        <td>ikhwan@gmail.com</td>
+                        <td>ikhwan123</td>
+                        <td>123456</td>
+
+                        <td>
+                            <button class="edit-btn">Edit</button>
+                            <button class="delete-btn">Hapus</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal Tambah/Edit Pengguna -->
+    <div class="modal" id="userModal" style="display: none;">
+        <div class="modal-content">
+            <h2 id="modalTitle">Tambah Pengguna</h2>
+            <form id="userForm">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" placeholder="Masukkan nama pengguna" required>
+                <label for="role">Jabatan:</label>
+                <select id="role">
+                    <option value="Mahasiswa">Mahasiswa</option>
+                    <option value="Dosen">Dosen</option>
+                    <option value="Admin">Admin</option>
+                </select>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Masukkan email pengguna" required>
+
+                <label for="username">Username:</label>
+                <input type="username" id="username" placeholder="Masukkan username pengguna" required>\
+
+                <label for="Password">Password:</label>
+                <input type="Password" id="Password" placeholder="Masukkan Password pengguna" required>
+                <button type="submit">Simpan</button>
+                <button type="button" onclick="closeModal()">Batal</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="kd_pengguna.js"></script>
+</body>
+
+</html>
